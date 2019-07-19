@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse("azkaban/webapp/servlet/velocity/style.vm")
@@ -50,7 +50,7 @@
 
   <div class="az-page-header">
     <div class="container-full">
-      <h1>所有触发器</h1>
+      <h1>All Triggers</h1>
     </div>
   </div>
 
@@ -65,11 +65,11 @@
           <thead>
           <tr>
             <th>ID</th>
-            <th>来源</th>
-            <th>提交者</th>
-            <th>描述</th>
-            <th>状态</th>
-            <!--th colspan="2" class="action ignoresort">操作</th-->
+            <th>Source</th>
+            <th>Submitted By</th>
+            <th>Description</th>
+            <th>Status</th>
+            <!--th colspan="2" class="action ignoresort">Action</th-->
           </tr>
           </thead>
           <tbody>
@@ -81,12 +81,12 @@
                 <td>${trigger.submitUser}</td>
                 <td>${trigger.getDescription()}</td>
                 <td>${trigger.getStatus()}</td>
-                <!--td><button id="expireTriggerBtn" onclick="expireTrigger(${trigger.triggerId})" >终止触发</button></td-->
+                <!--td><button id="expireTriggerBtn" onclick="expireTrigger(${trigger.triggerId})" >Expire Trigger</button></td-->
               </tr>
               #end
             #else
             <tr>
-              <td class="last">无触发器</td>
+              <td class="last">No Trigger Found</td>
             </tr>
             #end
           </tbody>

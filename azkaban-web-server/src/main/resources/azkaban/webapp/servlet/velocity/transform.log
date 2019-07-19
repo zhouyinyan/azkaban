@@ -58,5 +58,110 @@ History = 历史
 Flow Trigger Schedule = 流程触发调度
 Documentation = 文档
 
+Expire Trigger=终止触发
+No Trigger Found = 无触发器
+
+All Triggers = 所有触发器
+Source = 来源
+
+Statistics = 统计
+Executor = 执行器
+Metric = 指标
+useStats  = 使用统计
+
+Options = 选项
+Alert Emails = 告警邮箱
+Flow SLA Rules = 流程SLA规则
+
+add Row = 添加行
+All schedules are basead on the server timezone = 所有的调度都依赖服务器上的时区
+Day of Month = 日期
+Day of Week = 星期
+Special Characters = 特殊字符
+any value = 任意值
+value list separators = 值分割符
+range of values = 值范围
+step values = 步长
+Detailed instructions = 详细说明
+Reset = 重置
+Next 10 scheduled executions = 往后10次调度
+
+Schedule Flow Options = 调度流程配置
+General Options = 通用配置
+Flow Options = 流程配置
+
+Finish In = 结束
+Schedule Time = 调度时间
+Schedule Date = 调度日期
+Recurrence = 循环
+repeat every = 重复每
+
+Completion Actions = 结束操作
+Failure Action = 失败操作
+Finish Current Running = 结束正在执行
+Cancel All = 取消所有
+Finish All Possible = 合理结束
+
+Failure Email = 失败邮箱
+Notify on Failure = 失败通知
+First Failure = 首次失败
+Flow Stop = 流程停止
+
+Success Email = 成功邮箱
+Concurrent Execution = 并发执行
+Run Concurrently = 并发运行
+Pipeline = 管道
+Queue Job = 任务队列
+
+Flow Property Override = 流程熟悉覆盖
+
+Reset Pan Zoom = 重置缩放
+
+Click column headers to sort = 点击列头排序
+First Scheduled to Run = 首次调度时间
+Next Execution Time = 下次调度时间
+
+No scheduled flow found = 无调度流程
+
+Inherited From = 继承自
+Source of = 源自
+Created on = 创建时间
+Last modified on = 最近修改时间
+Modified by = 修改者
+
+No flows have been uploaded to this project yet = 这个项目还没有上传流程
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

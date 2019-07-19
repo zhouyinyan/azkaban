@@ -25,16 +25,16 @@
       <div class="header-control">
         <div class="header-form pull-right" id="project-options">
           <button id="project-delete-btn" class="btn btn-sm btn-danger">
-            <span class="glyphicon glyphicon-trash"></span> 删除项目
+            <span class="glyphicon glyphicon-trash"></span> Delete Project
           </button>
           #if (!$hideUploadProject)
             <button id="project-upload-btn" class="btn btn-sm btn-primary">
-              <span class="glyphicon glyphicon-upload"></span> 上传
+              <span class="glyphicon glyphicon-upload"></span> Upload
             </button>
           #end
           <a class="btn btn-sm btn-info"
              href="${context}/manager?project=${project.name}&download=true">
-            <span class="glyphicon glyphicon-download"></span> 下载
+            <span class="glyphicon glyphicon-download"></span> Download
           </a>
         </div>
       </div>

@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse ("azkaban/webapp/servlet/velocity/style.vm")
@@ -76,12 +76,12 @@
                       <button type="button"
                               title=""
                               class="btn btn-xs btn-success execute-flow ${isDisabled}"
-                              flowId="${flow.id}">执行流程
+                              flowId="${flow.id}">Execute Flow
                       </button>
                       <a href="${context}/manager?project=${project.name}&flow=${flow.id}#executions"
-                         class="btn btn-info btn-xs">执行</a>
+                         class="btn btn-info btn-xs">Executions</a>
                       <a href="${context}/manager?project=${project.name}&flow=${flow.id}#summary"
-                         class="btn btn-info btn-xs">汇总</a>
+                         class="btn btn-info btn-xs">Summary</a>
                     </div>
                   #end
                   <span class="glyphicon glyphicon-chevron-down flow-expander-icon"></span>
@@ -95,8 +95,8 @@
             #end
           #else
             <div class="callout callout-default">
-              <h4>无流程</h4>
-              <p>这个项目还没有上传流程.</p>
+              <h4>No Flows</h4>
+              <p>No flows have been uploaded to this project yet.</p>
             </div>
           #end
         </div><!-- /#flow-tabs -->
