@@ -16,12 +16,12 @@
 
 <div class="az-page-header">
   <div class="container-full">
-    <h1 class="danger">发生错误</h1>
+    <h1 class="danger">Something's wrong</h1>
   </div>
 </div>
 <div class="container-full">
   <div class="alert alert-danger">
-    <h4>错误</h4>
+    <h4>Error</h4>
     $errorMsg
   </div>
 </div>

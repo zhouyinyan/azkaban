@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse("azkaban/webapp/servlet/velocity/style.vm")
@@ -68,9 +68,9 @@
         <div class="header-title">
           <h1>
             <a href="${context}/executor?execid=${execid}">
-              流程执行
+              Flow Execution
               #if (${execid} == "-1" || ${execid} == "-2")
-                <small>未执行 <span id="flowStatus">-</span></small>
+                <small>not started <span id="flowStatus">-</span></small>
               #else
                 <small>$execid <span id="flowStatus">-</span></small>
               #end
@@ -80,12 +80,12 @@
         <div class="header-control">
           <div class="exflow-stats">
             <div class="col-xs-5">
-              <p><strong>提交者</strong> <span id="submitUser">-</span></p>
-              <p><strong>持续时间</strong> <span id="duration">-</span></p>
+              <p><strong>Submit User</strong> <span id="submitUser">-</span></p>
+              <p><strong>Duration</strong> <span id="duration">-</span></p>
             </div>
             <div class="col-xs-7">
-              <p><strong>开始时间</strong> <span id="startTime">-</span></p>
-              <p><strong>结束时间</strong> <span id="endTime">-</span></p>
+              <p><strong>Start Time</strong> <span id="startTime">-</span></p>
+              <p><strong>End Time</strong> <span id="endTime">-</span></p>
             </div>
           </div>
           <div class="clearfix"></div>
@@ -97,13 +97,13 @@
     <div class="container-full">
       <ol class="breadcrumb">
         <li><a
-            href="${context}/manager?project=${projectName}"><strong>项目</strong> $projectName
+            href="${context}/manager?project=${projectName}"><strong>Project</strong> $projectName
         </a></li>
         <li><a
-            href="${context}/manager?project=${projectName}&flow=${flowid}"><strong>流程</strong>
+            href="${context}/manager?project=${projectName}&flow=${flowid}"><strong>Flow</strong>
           $flowid
         </a></li>
-        <li class="active"><strong>执行</strong> $execid</li>
+        <li class="active"><strong>Execution</strong> $execid</li>
       </ol>
     </div>
   </div>
@@ -115,11 +115,11 @@
   ## Tabs and buttons.
 
     <ul class="nav nav-tabs nav-sm" id="headertabs">
-      <li id="graphViewLink"><a href="#graph">图形</a></li>
-      <li id="flowTriggerlistViewLink"><a href="#triggerslist">流程触发列表</a></li>
-      <li id="jobslistViewLink"><a href="#jobslist">任务列表</a></li>
-      <li id="flowLogViewLink"><a href="#log">流程日志</a></li>
-      <li id="statsViewLink"><a href="#stats">状态</a></li>
+      <li id="graphViewLink"><a href="#graph">Graph</a></li>
+      <li id="flowTriggerlistViewLink"><a href="#triggerslist">Flow Trigger List</a></li>
+      <li id="jobslistViewLink"><a href="#jobslist">Job List</a></li>
+      <li id="flowLogViewLink"><a href="#log">Flow Log</a></li>
+      <li id="statsViewLink"><a href="#stats">Stats</a></li>
       #if ($executionExternalLinkURL)
         <li><a id="analyzerButton" href="${executionExternalLinkURL}" class="btn btn-info btn-sm"
                type="button" target="_blank"
@@ -127,20 +127,20 @@
         </li>
       #end
       <li class="nav-button pull-right">
-        <button type="button" id="pausebtn" class="btn btn-primary btn-sm">暂停</button>
+        <button type="button" id="pausebtn" class="btn btn-primary btn-sm">Pause</button>
       </li>
       <li class="nav-button pull-right">
-        <button type="button" id="resumebtn" class="btn btn-primary btn-sm">恢复</button>
+        <button type="button" id="resumebtn" class="btn btn-primary btn-sm">Resume</button>
       </li>
       <li class="nav-button pull-right">
-        <button type="button" id="cancelbtn" class="btn btn-danger btn-sm">杀死</button>
+        <button type="button" id="cancelbtn" class="btn btn-danger btn-sm">Kill</button>
       </li>
       <li class="nav-button pull-right">
-        <button type="button" id="retrybtn" class="btn btn-success btn-sm">失败重试</button>
+        <button type="button" id="retrybtn" class="btn btn-success btn-sm">Retry Failed</button>
       </li>
       <li class="nav-button pull-right">
         #set($isDisabled = "#if(${isLocked})disabled#end")
-        <button type="button" id="executebtn" class="btn btn-success btn-sm ${isDisabled}">准备执行
+        <button type="button" id="executebtn" class="btn btn-success btn-sm ${isDisabled}">Prepare Execution
         </button>
       </li>
     </ul>
@@ -158,14 +158,14 @@
         <table class="table table-bordered table-condensed table-hover executions-table">
           <thead>
           <tr>
-            <th>触发实例ID</th>
-            <th>提交者</th>
-            <th class="date">开始时间</th>
-            <th class="date">结束时间</th>
-            <th class="elapse">耗时</th>
-            <th class="status">状态</th>
-            <th class="props">触发器属性</th>
-            <th class="action">操作</th>
+            <th>Trigger Instance Id</th>
+            <th>Submitted by</th>
+            <th class="date">Start Time</th>
+            <th class="date">End Time</th>
+            <th class="elapse">Elapsed</th>
+            <th class="status">Status</th>
+            <th class="props">Trigger Properties</th>
+            <th class="action">Action</th>
           </tr>
 
           <div class="modal fade" id="dependencyList" tabindex="-1"
@@ -176,7 +176,7 @@
                 <div class="modal-header">
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                  <h4 class="modal-title" id="dependencyLabel">依赖性</h4>
+                  <h4 class="modal-title" id="dependencyLabel">Dependencies</h4>
                 </div>
                 <div id="triggerProp" class="modal-body">
                 </div>
@@ -193,13 +193,13 @@
           </tbody>
           <thead>
           <tr>
-            <th>触发实例ID</th>
-            <th>依赖名称</th>
-            <th class="triggertype">依赖类型</th>
-            <th class="date">开始时间</th>
-            <th class="date">结束时间</th>
-            <th class="elapse">耗时</th>
-            <th class="status">状态</th>
+            <th>Trigger Instance Id</th>
+            <th>Dependency Name</th>
+            <th class="triggertype">Dependency Type</th>
+            <th class="date">Start Time</th>
+            <th class="date">End Time</th>
+            <th class="elapse">Elapsed</th>
+            <th class="status">Status</th>
             <th class="cause">Cancellation Cause</th>
           </tr>
           </thead>
@@ -218,14 +218,14 @@
         <table class="table table-bordered table-condensed table-hover executions-table">
           <thead>
           <tr>
-            <th>名称</th>
-            <th class="jobtype">类型</th>
-            <th class="timeline">时间轴</th>
-            <th class="date">开始时间</th>
-            <th class="date">结束时间</th>
-            <th class="elapse">耗时</th>
-            <th class="status">状态</th>
-            <th class="logs">细节</th>
+            <th>Name</th>
+            <th class="jobtype">Type</th>
+            <th class="timeline">Timeline</th>
+            <th class="date">Start Time</th>
+            <th class="date">End Time</th>
+            <th class="elapse">Elapsed</th>
+            <th class="status">Status</th>
+            <th class="logs">Details</th>
           </tr>
           </thead>
           <tbody id="executableBody">
@@ -244,9 +244,9 @@
           <div class="panel panel-default">
             <div class="panel-heading">
               <div class="pull-right">
-                <button type="button" id="updateLogBtn" class="btn btn-xs btn-info">刷新</button>
+                <button type="button" id="updateLogBtn" class="btn btn-xs btn-info">Refresh</button>
               </div>
-              流程日志
+              Flow log
             </div>
             <div class="panel-body">
               <pre id="logSection"></pre>
@@ -264,8 +264,8 @@
       <div class="row">
         <div class="col-lg-12">
           <div class="callout callout-default">
-            <h4>无有效统计</h4>
-            <p>这个流程执行统计未生效.</p>
+            <h4>No stats available</h4>
+            <p>Stats for this flow execution are not available.</p>
           </div>
         </div>
       </div>
@@ -281,13 +281,13 @@
           <div class="modal-header" id="messageTitle">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;
             </button>
-            <h4 class="modal-title">错误</h4>
+            <h4 class="modal-title">Error</h4>
           </div>
           <div class="modal-body" id="messageDiv">
             <p id="messageBox"></p>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">驳回?</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Dismiss</button>
           </div>
         </div>
       </div>

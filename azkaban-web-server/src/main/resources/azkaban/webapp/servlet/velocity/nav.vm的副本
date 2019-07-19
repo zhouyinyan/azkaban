@@ -116,22 +116,22 @@
       #if ($navbar_disabled != 1)
         <ul class="nav navbar-nav">
           <li#if($current_page == 'all') class="active"#end onClick="navMenuClick('$!context/')"><a
-              href="$!context/index">项目</a></li>
+              href="$!context/index">Projects</a></li>
           <li#if($current_page == 'schedule') class="active"#end
                                               onClick="navMenuClick('$!context/schedule')"><a
-              href="$!context/schedule">调度</a></li>
+              href="$!context/schedule">Scheduling</a></li>
           <!--<li#if($current_page ==
             'triggers') class="active"#end onClick="navMenuClick('$!context/triggers')"><a href="$!context/triggers">Triggers</a></li>-->
           <li#if($current_page == 'executing') class="active"#end
                                                onClick="navMenuClick('$!context/executor')">
-            <a href="$!context/executor">执行</a></li>
+            <a href="$!context/executor">Executing</a></li>
           <li#if($current_page == 'history') class="active"#end
                                              onClick="navMenuClick('$!context/history')"><a
-              href="$!context/history">历史</a></li>
+              href="$!context/history">History</a></li>
           <li#if($current_page == 'flowtrigger') class="active"#end
                                                  onClick="navMenuClick('$!context/flowtrigger')">
             <a
-                href="$!context/flowtrigger">流程触发调度</a></li>
+                href="$!context/flowtrigger">Flow Trigger Schedule</a></li>
 
           #foreach ($viewer in $viewers)
             #if (!$viewer.hidden)
@@ -151,7 +151,7 @@
 
           <li#if($current_page == 'doc') class="active"#end
                                          onClick="navMenuClick('https://azkaban.readthedocs.io/en/latest/')">
-            <a href="https://azkaban.readthedocs.io/en/latest/">文档</a></li>
+            <a href="https://azkaban.readthedocs.io/en/latest/">Documentation</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">

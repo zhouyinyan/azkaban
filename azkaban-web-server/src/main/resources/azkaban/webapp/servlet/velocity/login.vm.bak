@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse("azkaban/webapp/servlet/velocity/style.vm")
@@ -38,12 +38,12 @@
     <div class="well">
       <form id="login-form" role="form">
         <fieldset>
-          <legend>登录</legend>
+          <legend>Login</legend>
           <input type="text" class="form-control" name="username" id="username"
                  placeholder="Username">
           <input type="password" class="form-control" name="password" id="password"
                  placeholder="${passwordPlaceholder}">
-          <button type="button" class="btn btn-primary btn-lg btn-block" id="login-submit">登录
+          <button type="button" class="btn btn-primary btn-lg btn-block" id="login-submit">Login
           </button>
         </fieldset>
       </form>

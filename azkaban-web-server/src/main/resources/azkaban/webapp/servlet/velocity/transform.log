@@ -1,0 +1,62 @@
+翻译
+
+Flow Execution = 流程执行
+not started = 未执行
+Submit User = 提交者
+Duration = 持续时间
+Start Time = 开始时间
+End Time = 结束时间
+
+Project = 项目
+Flow = 流程
+Execution = 执行
+Graph = 图形
+Flow Trigger List = 流程触发列表
+Job List = 任务列表
+Flow Log = 流程日志
+Stats = 状态
+Pause = 暂停
+Resume = 恢复
+Kill = 杀死
+Retry Failed = 失败重试
+Prepare Execution = 准备执行
+
+Trigger Instance Id = 触发实例ID
+Submitted by = 提交者
+Trigger Properties=触发器属性
+Action = 操作
+Dependencies = 依赖性
+Close = 关闭
+Dependency Name = 依赖名称
+Dependency Type = 依赖类型
+Cancellation Cause = 取消原因
+
+Name = 名称
+Type = 类型
+Timeline = 时间轴
+Details = 细节
+Refresh = 刷新
+
+No stats available = 无有效统计
+Stats for this flow execution are not available = 这个流程执行统计未生效
+Dismiss = 驳回
+
+Quick Search = 快速搜索
+Create Project = 创建项目
+Personal = 私人的
+Group = 团体的
+Last modified on = 最后修改时间
+
+No Viewable Projects = 无可见项目
+Click Create Project to create a new project = 点击创建项目按钮新建一个项目
+Description = 描述
+Cancel = 取消
+
+Scheduling = 调度
+Executing = 执行
+History = 历史
+Flow Trigger Schedule = 流程触发调度
+Documentation = 文档
+
+
+
