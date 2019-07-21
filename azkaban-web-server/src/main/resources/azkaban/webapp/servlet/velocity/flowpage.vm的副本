@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse("azkaban/webapp/servlet/velocity/style.vm")
@@ -91,7 +91,7 @@
     <div class="container-full">
       <div class="row">
         <div class="header-title">
-          <h1><a href="${context}/manager?project=${project.name}&flow=${flowid}">流程
+          <h1><a href="${context}/manager?project=${project.name}&flow=${flowid}">Flow
             <small>$flowid</small>
           </a></h1>
         </div>
@@ -99,7 +99,7 @@
           <div class="pull-right header-form">
             #set($isDisabled = "#if(${isLocked})disabled#end")
             <button type="button" class="btn btn-sm btn-success ${isDisabled}" id="executebtn">
-              调度 / 执行 流程
+              Schedule / Execute Flow
             </button>
           </div>
         </div>
@@ -110,9 +110,9 @@
     <div class="container-full">
       <ol class="breadcrumb">
         <li><a
-            href="${context}/manager?project=${project.name}"><strong>项目</strong> $project.name
+            href="${context}/manager?project=${project.name}"><strong>Project</strong> $project.name
         </a></li>
-        <li class="active"><strong>流程</strong> $flowid</li>
+        <li class="active"><strong>Flow</strong> $flowid</li>
       </ol>
     </div>
   </div>
@@ -124,10 +124,10 @@
   ## Tabs
 
     <ul class="nav nav-tabs nav-sm" id="headertabs">
-      <li id="graphViewLink"><a href="#graph">图形</a></li>
-      <li id="executionsViewLink"><a href="#executions">执行</a></li>
-      <li id="flowtriggersViewLink"><a href="#flowtriggers">流程触发</a></li>
-      <li id="summaryViewLink"><a href="#summary">概要</a></li>
+      <li id="graphViewLink"><a href="#graph">Graph</a></li>
+      <li id="executionsViewLink"><a href="#executions">Executions</a></li>
+      <li id="flowtriggersViewLink"><a href="#flowtriggers">Flow Triggers</a></li>
+      <li id="summaryViewLink"><a href="#summary">Summary</a></li>
     </ul>
   </div>
 
@@ -147,13 +147,13 @@
                id="execTable">
           <thead>
           <tr>
-            <th>执行Id</th>
-            <th>用户</th>
-            <th class="date">开始时间</th>
-            <th class="date">结束时间</th>
-            <th class="elapse">耗时</th>
-            <th class="status">状态</th>
-            <th class="action">操作</th>
+            <th>Execution Id</th>
+            <th>User</th>
+            <th class="date">Start Time</th>
+            <th class="date">End Time</th>
+            <th class="elapse">Elapsed</th>
+            <th class="status">Status</th>
+            <th class="action">Action</th>
           </tr>
           </thead>
           <tbody id="execTableBody">
@@ -174,13 +174,13 @@
                id="flowtriggerTable">
           <thead>
           <tr>
-            <th>流程触发实例Id</th>
-            <th>提交者</th>
-            <th class="date">开始时间</th>
-            <th class="date">结束时间</th>
-            <th class="elapse">耗时</th>
-            <th class="status">状态</th>
-            <th class="action">操作</th>
+            <th>Flow Trigger Instance Id</th>
+            <th>Submitting user</th>
+            <th class="date">Start Time</th>
+            <th class="date">End Time</th>
+            <th class="elapse">Elapsed</th>
+            <th class="status">Status</th>
+            <th class="action">Action</th>
           </tr>
           </thead>
           <tbody id="flowtriggerTableBody">
@@ -205,7 +205,7 @@
             <p>Analyze the last run for aggregate performance statistics.
               Note: this may take a few minutes, especially if your flow is large.</p>
             <p>
-              <button type="button" id="analyze-btn" class="btn btn-primary">分析</button>
+              <button type="button" id="analyze-btn" class="btn btn-primary">Analyze</button>
             </p>
           </div>
         </div>

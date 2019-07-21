@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse("azkaban/webapp/servlet/velocity/style.vm")
@@ -90,7 +90,7 @@
 
 <div class="az-page-header">
   <div class="container-full">
-    <h1><a href="${context}/flowtriggerinstance">执行中触发</a></h1>
+    <h1><a href="${context}/flowtriggerinstance">Executing Triggers</a></h1>
   </div>
 </div>
 
@@ -101,8 +101,8 @@
 ## Page Content
 
   <ul class="nav nav-tabs nav-sm" id="header-tabs">
-    <li id="currently-running-view-link"><a href="#currently-running">触发执行</a></li>
-    <li id="recently-finished-view-link"><a href="#recently-finished">最近完成</a></li>
+    <li id="currently-running-view-link"><a href="#currently-running">Trigger Executions</a></li>
+    <li id="recently-finished-view-link"><a href="#recently-finished">Recently Finished</a></li>
   </ul>
 
   <div class="row" id="currently-running-view">

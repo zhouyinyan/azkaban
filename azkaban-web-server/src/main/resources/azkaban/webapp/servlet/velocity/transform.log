@@ -39,7 +39,7 @@ Refresh = 刷新
 
 No stats available = 无有效统计
 Stats for this flow execution are not available = 这个流程执行统计未生效
-Dismiss = 驳回
+Dismiss = 驳回？
 
 Quick Search = 快速搜索
 Create Project = 创建项目
@@ -131,6 +131,35 @@ Modified by = 修改者
 
 No flows have been uploaded to this project yet = 这个项目还没有上传流程
 
+
+Project Logs = 项目日志
+Upload Project Files = 上传项目文件
+Job Archive = 任务文件
+
+
+Audit Logs = 审计日志
+Notification System = 通知系统
+Action Required = 采取的行动
+
+Continue = 继续
+Condition = 条件
+Dependencies = 依赖
+Dependents = 被依赖
+
+Job Essentials = 任务要素
+General Job Settings = 通用任务设置
+A job may be shared by multiple flows. The change will
+                  be global! = 多个流程可以共享任务，修改设置会影响全局。
+
+Spark Job Log = Spark任务日志
+Attempt = ？？
+
+Invalid Session = 无效会话
+Session has expired. Please re-login = 会话过期.请重新登录
+flow name containing = 流程名包含
+Scheduled Flow Triggers = 调度流程触发
+
+Flow Trigger Instance  = 流程触发实例
 
 
 

@@ -16,12 +16,13 @@
 
 <ul class="nav nav-tabs nav-sm">
   <li#if($project_page == 'flows') class="active"#end><a
-      href="${context}/manager?project=${project.name}">流程</a></li>
+      href="${context}/manager?project=${project.name}">Flows</a></li>
   <li#if($project_page == 'permissions') class="active"#end><a id="project-permission-btn"
-                                                               href="${context}/manager?project=${project.name}&permissions">权限</a>
+                                                               href="${context}/manager?project=${project.name}&permissions">Permissions</a>
   </li>
   #if ($admin)
     <li#if($project_page == 'logs') class="active"#end><a id="project-logs-btn"
-                                                          href="${context}/manager?project=${project.name}&logs">项目日志</a></li>
+                                                          href="${context}/manager?project=${project.name}&logs">Project
+      Logs</a></li>
   #end
 </ul>

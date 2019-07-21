@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_cn">
 <head>
 
   #parse ("azkaban/webapp/servlet/velocity/style.vm")
@@ -62,10 +62,10 @@
 
         <div class="panel panel-success">
           <div class="panel-heading">
-            User
+            用户
             #if ($isAdmin)
               <div class="pull-right">
-                <button id="addUser" class="btn btn-xs btn-success">Add</button>
+                <button id="addUser" class="btn btn-xs btn-success">添加</button>
               </div>
             #end
           </div>

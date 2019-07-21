@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="zh_cn">
+<html lang="en">
 <head>
 
   #parse ("azkaban/webapp/servlet/velocity/style.vm")
@@ -64,17 +64,17 @@
         <div class="panel panel-default" id="flow-tabs">
           <div class="panel-heading">
             <div class="pull-right" id="project-options">
-              <button type="button" id="updateLogBtn" class="btn btn-xs btn-info">刷新</button>
+              <button type="button" id="updateLogBtn" class="btn btn-xs btn-info">Refresh</button>
             </div>
-            审计日志
+            Audit Logs
           </div>
           <table class="table table-striped" id="logTable">
             <thead>
             <tr>
-              <th>时间</th>
-              <th>用户</th>
-              <th>类型</th>
-              <th>消息</th>
+              <th>Time</th>
+              <th>User</th>
+              <th>Type</th>
+              <th>Message</th>
             </tr>
             </thead>
             <tbody>

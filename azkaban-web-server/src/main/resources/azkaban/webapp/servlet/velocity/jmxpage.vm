@@ -15,7 +15,7 @@
 *#
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh_cn">
 <head>
 
   #parse ("azkaban/webapp/servlet/velocity/style.vm")

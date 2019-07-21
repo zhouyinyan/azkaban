@@ -10,8 +10,8 @@
       <table class="dataPropertiesTable">
         <thead class="dataPropertiesHead">
         <tr>
-          <th>名称</th>
-          <th>值</th>
+          <th>Name</th>
+          <th>Value</th>
         </tr>
         </thead>
         <tbody class="dataPropertiesBody">
