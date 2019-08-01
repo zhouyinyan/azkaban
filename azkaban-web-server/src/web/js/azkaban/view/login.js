@@ -36,10 +36,10 @@ azkaban.LoginView = Backbone.View.extend({
     $('#error-msg').hide();
   },
 
-  handleLogin: function (evt) {
+  handleLogin: function (evt, userValue, pwdValue) {
     console.log("Logging in.");
-    var username = $("#username").val();
-    var password = $("#password").val();
+    var username = $("#username").val() || userValue;
+    var password = $("#password").val() || pwdValue;
 
     $.ajax({
       async: "false",
