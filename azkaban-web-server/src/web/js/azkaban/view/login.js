@@ -13,6 +13,15 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
+// 获取url参数
+function getUrlParam(name) {
+  var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+  var r = window.location.search.substring(1).match(reg)
+    || window.location.hash.substring(window.location.hash.search(/\?/) + 1).match(reg);
+  if (r !== null) {
+    return decodeURIComponent(r[2]);
+  }
+}
 
 $.namespace('azkaban');
 
@@ -44,6 +53,8 @@ azkaban.LoginView = Backbone.View.extend({
       },
       success: function (data) {
         if (data.error) {
+          // 登录失败的时候，显示内陆也内容
+          $(document.body).show();
           $('#error-msg').text(data.error);
           $('#error-msg').slideDown('fast');
         }
@@ -66,4 +77,9 @@ azkaban.LoginView = Backbone.View.extend({
 
 $(function () {
   loginView = new azkaban.LoginView({el: $('#login-form')});
+
+  //默认隐藏登录页面内容
+  $(document.body).hide();
+  // 临时代码，自动登录
+  loginView.handleLogin(null, getUrlParam('user') || 'azkaban', getUrlParam('pwd') || 'azkaban');
 });
